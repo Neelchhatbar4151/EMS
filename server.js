@@ -1,6 +1,8 @@
 const Express = require('express');
 const App = Express();
 const path = require("path");
+const Cors = require('cors');
+App.use(Cors());
 const PORT = process.env.PORT || 5000;
 App.use(Express.static(path.join(__dirname, "./build")));
 
